@@ -38,6 +38,10 @@ body {
 nav {
   width: 100%;
   min-height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,7 +86,29 @@ nav ul li a {
   font-size: 2rem;
   padding: 0.5rem;
   border-radius: 1000vw;
-  width: 2rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   aspect-ratio: 1;
   outline: 3px solid var(--primary);
+  cursor: pointer;
+}
+
+/* Main */
+
+main {
+  margin-left: 7.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.bullet_point {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  background: var(--primary);
+  border-radius: 50%;
 }
