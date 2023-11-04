@@ -35,12 +35,40 @@
         justify-content: center;
         align-items: center;
       }
+      h1 {
+        font-size: 5rem;
+      }
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        position: relative;
+        font-weight: 700;
+      }
+
+      a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0.5rem;
+        background: var(--primary);
+        bottom: -0.5rem;
+        left: 0;
+        transition: 300ms ease width;
+      }
+
+      a:hover::after {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
-    <h1>Sorry, Working On It right now.</h1>
+    <h1>Work in Progress...</h1>
     <h2>
-      Redirecting to <a href="https://github.com/foxxo-dev">Github</a> in
+      Redirecting to <a href="https://github.com/foxxo-dev">My Github</a> in
       <span id="time">5</span>
       seconds...
     </h2>
@@ -48,10 +76,10 @@
   <script>
     let seconds = 5;
     setInterval(() => {
+      seconds--;
       if (seconds == 0) {
         window.location.href = 'https://github.com/foxxo-dev';
       }
-      seconds--;
       document.getElementById('time').innerHTML = seconds;
     }, 1000);
   </script>
