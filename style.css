@@ -262,8 +262,9 @@ h2 {
   );
   border-radius: 50%;
   padding: 2rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img_me img {
