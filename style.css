@@ -209,7 +209,7 @@ button:active {
   margin-block: 0.5rem;
 }
 
-#about-me h2 {
+h2 {
   font-size: 4rem;
   font-weight: 600;
   line-height: 0.8;
@@ -237,4 +237,55 @@ button:active {
 
 .img_me img {
   width: 75%;
+}
+
+/* Projects */
+
+.projects_container {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  outline: 5px solid var(--primary, red);
+  padding: 1rem;
+  max-width: 20rem;
+  justify-content: space-between;
+}
+
+.project img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+  border-radius: 50%;
+  background: var(--primary, red);
+}
+
+.project h3 {
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.project button {
+  box-shadow: none;
+  transform: none;
+}
+
+.project button:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.project button:active {
+  box-shadow: none;
+  transform: none;
 }
