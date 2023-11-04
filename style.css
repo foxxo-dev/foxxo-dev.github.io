@@ -104,6 +104,7 @@ main {
   margin-left: 7.5rem;
   margin-top: 5rem;
   overflow-x: none;
+  min-height: 100vh;
 }
 
 /* Landing */
@@ -112,6 +113,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+  height: calc(100vh - 5rem);
   /* align-items: center; */
 }
 
@@ -171,10 +175,10 @@ button:active {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 20s linear infinite;
+  animation: scroll 36s linear infinite;
 }
 
-@keyframes marquee {
+@keyframes scroll {
   from {
     transform: translateX(0);
   }
@@ -182,7 +186,6 @@ button:active {
     transform: translateX(-50%);
   }
 }
-
 .seperator_landing {
   position: absolute;
   bottom: 0.5rem;
@@ -194,4 +197,44 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* About Me */
+
+#about-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  place-items: center;
+  margin-block: 0.5rem;
+}
+
+#about-me h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 0.8;
+}
+
+#about-me p {
+  font-size: 1rem;
+}
+
+#about-me .img_me {
+  width: 50%;
+  aspect-ratio: 1;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--primary, red),
+    var(--primary, red) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border-radius: 50%;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.img_me img {
+  width: 75%;
 }
