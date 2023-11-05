@@ -17,11 +17,11 @@
     />
     <meta name="theme-color" content="#F74E3A" />
 
-    <meta content="./images/PortfolioArtwork.png" property="og:image" />
+    <meta content="../images/PortfolioArtwork.png" property="og:image" />
 
     <link type="application/json+oembed" href="./oembed.json" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./images/foxxo.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../images/foxxo.png" />
     <script
       src="https://kit.fontawesome.com/e67c6a9ebf.js"
       crossorigin="anonymous"
@@ -33,10 +33,9 @@
       <div class="logo">
         <h4>FXX</h4>
       </div>
-      <ul class="nav-links">
-        <li>
-          <a onclick="window.scrollTo(0, 0)" style="cursor: pointer">HOME</a>
-        </li>
+      <i class="fa-solid fa-bars fa-lg hambureger-nav"></i>
+      <ul class="nav-links" onclick="this.classList.toggle('opened')">
+        <li><a href="#landing">HOME</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <!-- <li><a href="#contact">---- --</a></li>
         <li><a href="#contact">CONTACT</a></li> -->
@@ -58,9 +57,9 @@
           <span class="bullet_point"></span> DREAM
         </h1>
         <p class="desc">
-          Hi! I am a developer from Poland. I love to code and enjoy flying in
-          Microsoft Flight Simulator. I am also a designer, and I can design
-          your website, or code it!
+          Hi! I am a 13 year old developer from Poland. I love to code and enjoy
+          flying in Microsoft Flight Simulator. I am also a designer, and I can
+          design your website, or code it!
         </p>
         <button><a href="#projects">SEE MY PROJECTS</a></button>
         <div class="marquee seperator_landing">
@@ -80,19 +79,19 @@
         <div>
           <h2>Learn About Me</h2>
           <p class="desc">
-            Hello! I am a developer from Poland with a strong foundation in
-            programming. I love to code, and I'm proficient in several
-            programming languages and technologies, including HTML, CSS, and
-            JavaScript. These languages enable me to craft visually appealing
-            and interactive web applications, which I thoroughly enjoy. In
-            addition to these, I have hands-on experience with React, a powerful
-            and versatile JavaScript library, which allows me to create dynamic
-            and responsive web interfaces. I'm continuously expanding my
-            knowledge, and my age doesn't deter me from taking on complex coding
-            challenges. When I'm not immersed in the world of programming, you
-            can often find me soaring through virtual skies in Microsoft Flight
-            Simulator, where the thrill of aviation meets the precision of
-            technology. <br />
+            Hello! I am a 13-year-old developer from Poland with a strong
+            foundation in programming. I love to code, and I'm proficient in
+            several programming languages and technologies, including HTML, CSS,
+            and JavaScript. These languages enable me to craft visually
+            appealing and interactive web applications, which I thoroughly
+            enjoy. In addition to these, I have hands-on experience with React,
+            a powerful and versatile JavaScript library, which allows me to
+            create dynamic and responsive web interfaces. I'm continuously
+            expanding my knowledge, and my age doesn't deter me from taking on
+            complex coding challenges. When I'm not immersed in the world of
+            programming, you can often find me soaring through virtual skies in
+            Microsoft Flight Simulator, where the thrill of aviation meets the
+            precision of technology. <br />
             <br />
             But that's not all - I'm not just a developer; I'm a designer too. I
             possess the creative flair to breathe life into your online
@@ -106,14 +105,14 @@
           </p>
         </div>
         <div class="img_me">
-          <img src="./images/foxxo.png" alt="Profile Picture" />
+          <img src="../images/foxxo.png" alt="Profile Picture" />
         </div>
       </section>
       <section id="projects">
         <h2>Projects</h2>
         <div class="projects_container">
           <div class="project">
-            <img src="./images/projects/" alt="" />
+            <img src="../images/projects/" alt="" />
             <h3>This is Poland</h3>
             <button
               onclick="window.location.href = 'https://thelpro.studio/this-is-poland'"
@@ -122,7 +121,7 @@
             </button>
           </div>
           <div class="project">
-            <img src="./images/projects/aitalk.png" alt="" />
+            <img src="../images/projects/aitalk.png" alt="" />
             <h3>AI Talk</h3>
             <button
               onclick="window.location.href = 'https://foxxotalk.netlify.app/'"
@@ -131,7 +130,7 @@
             </button>
           </div>
           <div class="project">
-            <img src="./images/projects/playsavvy.png" alt="" />
+            <img src="../images/projects/playsavvy.png" alt="" />
             <h3>Playsavvy</h3>
             <button
               onclick="window.location.href = 'https://playsavvy.netlify.app'"
@@ -140,7 +139,7 @@
             </button>
           </div>
           <div class="project">
-            <img src="./images/projects/foxtube.png" alt="" />
+            <img src="../images/projects/foxtube.png" alt="" />
             <h3>Foxtube</h3>
             <button
               onclick="window.location.href = 'https://foxtube.netlify.app'"
@@ -149,7 +148,7 @@
             </button>
           </div>
           <div class="project">
-            <img src="./images/projects/FlappyPotato.png" alt="" />
+            <img src="../images/projects/FlappyPotato.png" alt="" />
             <h3>Flappy Potato</h3>
             <button
               onclick="window.location.href = 'https://foxxo.ddns.net/flappypotato'"
@@ -158,7 +157,7 @@
             </button>
           </div>
           <div class="project">
-            <img src="./images/projects/Transportation4U.png" alt="" />
+            <img src="../images/projects/Transportation4U.png" alt="" />
             <h3>Transportation 4 U</h3>
             <button
               onclick="window.location.href = 'https://transportation4u.netlify.app/'"
