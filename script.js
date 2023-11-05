@@ -4,5 +4,5 @@
 //     navigator.userAgent
 //   )
 // ) {
-//   window.location.href = 'mobile.html';
+//   window.location.href = './pages/mobile.html';
 // }
