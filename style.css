@@ -81,6 +81,10 @@ nav {
   z-index: 5000;
 }
 
+.nav-hamburger {
+  display: none;
+}
+
 h4 {
   font-size: 1.5rem;
   font-weight: 900;
@@ -320,4 +324,61 @@ h2 {
 .project button:active {
   box-shadow: none;
   transform: none;
+}
+
+/* Time for Mobile Yay! (sarcasm intended)*/
+
+@media (max-width: 900px) {
+  main {
+    margin-left: 0px;
+  }
+  #landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    margin-inline: auto;
+  }
+  .bullet_point {
+    display: none;
+  }
+  #about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    margin-inline: auto;
+  }
+  section h2 {
+    text-align: center;
+  }
+  .projects_container {
+    justify-content: center;
+  }
+  .marquee {
+    display: none;
+    pointer-events: none;
+  }
+  .nav-hamburger {
+    display: none;
+    font-size: 2rem;
+    height: 100%;
+    aspect-ratio: 1;
+  }
+  .nav-links,
+  .socials {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 100dvh;
+    width: 80%;
+    z-index: 5000;
+  }
+}
+
+@media (max-width: 704px) {
+  .project {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
