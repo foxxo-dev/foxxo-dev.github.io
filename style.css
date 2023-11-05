@@ -82,7 +82,7 @@ nav {
   z-index: 5000;
 }
 
-.nav-hamburger {
+.hambureger-nav {
   display: none;
 }
 
@@ -360,11 +360,9 @@ h2 {
     display: none;
     pointer-events: none;
   }
-  .nav-hamburger {
-    display: none;
+  .hambureger-nav {
+    display: block;
     font-size: 2rem;
-    height: 100%;
-    aspect-ratio: 1;
   }
   .nav-links,
   .socials {
