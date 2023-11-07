@@ -2,10 +2,10 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url(fonts/inter/Inter-VariableFont_slnt\wght.ttf);
-  src: url(fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('woff'),
-    url(fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('opentype'),
-    url(fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('svg');
+  src: url(./fonts/inter/Inter-VariableFont_slnt\wght.ttf);
+  src: url(./fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('woff'),
+    url(./fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('opentype'),
+    url(./fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('svg');
 }
 
 /* Basic Styling */
