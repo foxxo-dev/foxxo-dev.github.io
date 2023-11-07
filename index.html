@@ -33,9 +33,9 @@
       <div class="logo">
         <h4>FXX</h4>
       </div>
-      <i class="fa-solid fa-bars fa-lg hambureger-nav"></i>
-      <ul class="nav-links" onclick="this.classList.toggle('opened')">
+      <ul class="nav-links" id="nav-link">
         <li><a href="#landing">HOME</a></li>
+        <li><a href="#about-me">ABOUT ME</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <!-- <li><a href="#contact">---- --</a></li>
         <li><a href="#contact">CONTACT</a></li> -->
@@ -47,8 +47,14 @@
         >
           <i class="fa-brands fa-github"></i>
         </div>
-        <div id="discord"><i class="fa-brands fa-discord"></i></div>
+        <div id="discord" onclick="copyText('foxxo.dev')">
+          <i class="fa-brands fa-discord"></i>
+        </div>
       </div>
+      <i
+        class="fa-solid fa-bars fa-lg hambureger-nav"
+        onclick="document.getElementById('nav-link').classList.toggle('open')"
+      ></i>
     </nav>
     <main>
       <section id="landing">
@@ -57,9 +63,9 @@
           <span class="bullet_point"></span> DREAM
         </h1>
         <p class="desc">
-          Hi! I am a developer from Poland. I love to code and enjoy
-          flying in Microsoft Flight Simulator. I am also a designer, and I can
-          design your website, or code it!
+          Hi! I am a developer from Poland. I love to code and enjoy flying in
+          Microsoft Flight Simulator. I am also a designer, and I can design
+          your website, or code it!
         </p>
         <button><a href="#projects">SEE MY PROJECTS</a></button>
         <div class="marquee seperator_landing">
@@ -79,19 +85,19 @@
         <div>
           <h2>Learn About Me</h2>
           <p class="desc">
-            Hello! I am a developer from Poland with a strong
-            foundation in programming. I love to code, and I'm proficient in
-            several programming languages and technologies, including HTML, CSS,
-            and JavaScript. These languages enable me to craft visually
-            appealing and interactive web applications, which I thoroughly
-            enjoy. In addition to these, I have hands-on experience with React,
-            a powerful and versatile JavaScript library, which allows me to
-            create dynamic and responsive web interfaces. I'm continuously
-            expanding my knowledge, and my age doesn't deter me from taking on
-            complex coding challenges. When I'm not immersed in the world of
-            programming, you can often find me soaring through virtual skies in
-            Microsoft Flight Simulator, where the thrill of aviation meets the
-            precision of technology. <br />
+            Hello! I am a developer from Poland with a strong foundation in
+            programming. I love to code, and I'm proficient in several
+            programming languages and technologies, including HTML, CSS, and
+            JavaScript. These languages enable me to craft visually appealing
+            and interactive web applications, which I thoroughly enjoy. In
+            addition to these, I have hands-on experience with React, a powerful
+            and versatile JavaScript library, which allows me to create dynamic
+            and responsive web interfaces. I'm continuously expanding my
+            knowledge, and my age doesn't deter me from taking on complex coding
+            challenges. When I'm not immersed in the world of programming, you
+            can often find me soaring through virtual skies in Microsoft Flight
+            Simulator, where the thrill of aviation meets the precision of
+            technology. <br />
             <br />
             But that's not all - I'm not just a developer; I'm a designer too. I
             possess the creative flair to breathe life into your online

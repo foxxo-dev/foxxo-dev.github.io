@@ -33,6 +33,7 @@ body {
   font-family: 'Inter', sans-serif;
   overflow-x: none;
   scroll-behavior: smooth;
+  scroll-margin-top: 5rem;
 }
 
 a {
@@ -363,15 +364,38 @@ h2 {
   .hambureger-nav {
     display: block;
     font-size: 2rem;
+    z-index: 2000000;
   }
-  .nav-links,
-  .socials {
-    display: none;
-    flex-direction: column;
+  .nav-links:is(.open) {
+    display: block;
+    all: unset;
+    color: white;
+    backdrop-filter: blur(10px) brightness(0.5);
     position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
     height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 5rem;
+    gap: 2rem;
+    list-style: none;
+    font-size: 2rem;
     width: 80%;
-    z-index: 5000;
+    opacity: 1;
+    z-index: 200000;
+    pointer-events: all;
+  }
+  .nav-links:not(:is(.open)) {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+  a::after {
+    width: 100%;
   }
 }
 
