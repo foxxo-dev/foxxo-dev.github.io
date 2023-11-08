@@ -1,0 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --bg: #f3f3ee;
+  --primary: #f74e3a;
+}
