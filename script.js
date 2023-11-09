@@ -18,3 +18,26 @@ function copyText(text) {
   document.body.removeChild(storage);
   alert('Copied to clipboard!');
 }
+
+if (localStorage.getItem('theme') === null) {
+  localStorage.setItem('theme', 'normal');
+}
+
+if (localStorage.getItem('theme') === 'contrast') {
+  document.body.setAttribute('data-theme', 'contrast');
+  document.getElementById('theme-toggle').checked = true;
+} else if (localStorage.getItem('theme') === 'normal') {
+  document.body.setAttribute('data-theme', 'normal');
+  document.getElementById('theme-toggle').checked = false;
+}
+
+document.getElementById('theme-toggle').addEventListener('change', (e) => {
+  console.log(e.target.checked);
+  if (e.target.checked) {
+    document.body.setAttribute('data-theme', 'contrast');
+    localStorage.setItem('theme', 'contrast');
+  } else {
+    document.body.setAttribute('data-theme', 'normal');
+    localStorage.setItem('theme', 'normal');
+  }
+});

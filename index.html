@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/scroll.css" />
     <link rel="stylesheet" href="./styles/contact-form.css" />
+    <link rel="stylesheet" href="./styles/slider.css" />
     <link rel="icon" href="../images/foxxo.png" />
     <script
       src="https://kit.fontawesome.com/e67c6a9ebf.js"
@@ -30,7 +31,7 @@
     ></script>
     <title>Foxxo | Portfolio</title>
   </head>
-  <body>
+  <body data-theme="normal">
     <nav>
       <div class="logo">
         <h4>FXX</h4>
@@ -176,24 +177,31 @@
         </div>
       </section>
       <section id="contact">
-        <h2>Contacties momant</h2>
+        <h2>Contact</h2>
         <form class="form_div">
           <div>
-            <span class="label">Emailos amigos</span>
+            <span class="label">Email</span>
             <input type="text" />
           </div>
           <div>
-            <span class="label">Subjectos the topicos</span>
+            <span class="label">Subject</span>
             <input type="text" />
           </div>
           <div>
-            <span class="label">writos łat abałtos</span>
+            <span class="label">Body</span>
             <textarea type="text" id="body"></textarea>
           </div>
-          <button>Dzamdziok</button>
+          <button class="special-btn">Submit</button>
         </form>
       </section>
+      <div style="height: 5rem"></div>
     </main>
+    <div class="settings">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>

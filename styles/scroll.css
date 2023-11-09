@@ -2,6 +2,7 @@
 
 ::-webkit-scrollbar {
   width: 10px;
+  background: var(--bg, white);
 }
 
 ::-webkit-track {
