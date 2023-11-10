@@ -1,0 +1,47 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+#contact > h2 {
+}
+
+#contact > .form_div {
+  padding: bottom 3rem;
+
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+#contact > .form_div > button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#contact > .form_div > div {
+  position: relative;
+  padding: 0.5rem;
+}
+
+#contact > .form_div > div input,
+#contact > .form_div > div textarea {
+  width: 100%;
+  min-height: 4rem;
+}
+
+#contact > .form_div > div:nth-child(3) {
+  grid-area: auto / auto / auto / span 2;
+}
+
+#contact > .form_div > div > .label {
+  position: absolute;
+  left: 0;
+  top: -1rem;
+}

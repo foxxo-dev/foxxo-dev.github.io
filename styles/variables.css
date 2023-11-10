@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Default Theme */
+
+body[data-theme='normal'] {
+  --bg: #f3f3ee;
+  --primary: #f74e3a;
+}
+
+/* Contrast Theme */
+body[data-theme='contrast'] {
+  --primary: #f3f3ee;
+  --bg: #f74e3a;
+}

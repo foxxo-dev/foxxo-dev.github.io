@@ -1,25 +1,17 @@
 /* Initialize The Font */
-
+/* 
 @font-face {
   font-family: 'Inter';
   src: url(./fonts/inter/Inter-VariableFont_slnt\wght.ttf);
   src: url(./fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('woff'),
     url(./fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('opentype'),
     url(./fonts/inter/Inter-VariableFont_slnt\wght.ttf) format('svg');
-}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import 'variables.css';
 
 /* Basic Styling */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-:root {
-  --bg: #f3f3ee;
-  --primary: #f74e3a;
-}
 
 html,
 body {
@@ -28,12 +20,13 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background: var(--bg);
+  background: var(--bg, white);
   color: var(--primary, red);
   font-family: 'Inter', sans-serif;
   overflow-x: none;
   scroll-behavior: smooth;
   scroll-margin-top: 5rem;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
 }
 
 a {
@@ -101,6 +94,8 @@ nav ul {
   outline: 3px solid var(--primary);
   padding: 1rem;
   border-radius: 1000vw;
+  -webkit-border-radius: 1000vw;
+  -moz-border-radius: 1000vw;
   gap: 1rem;
   z-index: 200;
 }
@@ -125,6 +120,8 @@ nav ul li a {
   font-size: 2rem;
   padding: 0.5rem;
   border-radius: 1000vw;
+  -webkit-border-radius: 1000vw;
+  -moz-border-radius: 1000vw;
   width: 3.5rem;
   display: flex;
   justify-content: center;
@@ -163,8 +160,10 @@ h1 {
   display: inline-block;
   height: 3rem;
   width: 3rem;
-  background: var(--primary);
+  background: var(--primary, red);
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 }
 
 p.desc {
@@ -180,6 +179,8 @@ p.desc {
 button {
   all: unset;
   border-radius: 6.25rem;
+  -webkit-border-radius: 6.25rem;
+  -moz-border-radius: 6.25rem;
   background: var(--primary, #f74e3a);
   box-shadow: -12px 12px 0px 2px #000;
   color: var(--bg, white);
@@ -200,13 +201,7 @@ button:active {
   box-shadow: -6px 6px 0px 2px #000;
 }
 
-.marquee {
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  height: 200px;
-  overflow-x: hidden;
-}
+/* Marquee */
 
 .track {
   position: absolute;
@@ -232,8 +227,9 @@ button:active {
   outline: 5px solid var(--primary, red);
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  overflow-x: hidden;
 }
 
 /* About Me */
@@ -267,6 +263,8 @@ h2 {
     transparent 20px
   );
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -275,6 +273,8 @@ h2 {
 
 .img_me img {
   width: 75%;
+  height: 75%;
+  aspect-ratio: 1;
 }
 
 /* Projects */
@@ -302,8 +302,9 @@ h2 {
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center;
-  border-radius: 1rem;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   background: var(--primary, red);
 }
 
@@ -407,6 +408,8 @@ h2 {
   }
 }
 
+/* Contact */
+
 input,
 textarea {
   all: unset;
@@ -423,4 +426,14 @@ textarea {
 section#contact {
   display: flex;
   flex-wrap: wrap;
+}
+.special-btn{
+  box-shadow: none;
+  outline: 10px solid var(--bg, white);
+  border-radius: 0.75rem;
+  transform: translate(0, 50%);
+}
+
+input, textarea{
+  border-radius: 0.5rem;
 }

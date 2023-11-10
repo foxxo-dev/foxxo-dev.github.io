@@ -20,7 +20,10 @@
     <meta content="../images/PortfolioArtwork.png" property="og:image" />
 
     <link type="application/json+oembed" href="./oembed.json" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/scroll.css" />
+    <link rel="stylesheet" href="./styles/contact-form.css" />
+    <link rel="stylesheet" href="./styles/slider.css" />
     <link rel="icon" href="../images/foxxo.png" />
     <script
       src="https://kit.fontawesome.com/e67c6a9ebf.js"
@@ -28,7 +31,7 @@
     ></script>
     <title>Foxxo | Portfolio</title>
   </head>
-  <body>
+  <body data-theme="normal">
     <nav>
       <div class="logo">
         <h4>FXX</h4>
@@ -43,6 +46,7 @@
       <div class="socials">
         <div
           id="git"
+          onclick="window.open('https://github.com/foxxo-dev', '_blank')"
           onclick="window.open('https://github.com/foxxo-dev', '_blank')"
         >
           <i class="fa-brands fa-github"></i>
@@ -166,7 +170,7 @@
             <img src="../images/projects/Transportation4U.png" alt="" />
             <h3>Transportation 4 U</h3>
             <button
-              onclick="window.open('http://trans4u.foxxo.studio/',  '_blank')"
+              onclick="window.location.href = 'https://transportation4u.netlify.app/'"
             >
               OPEN PROJECT
             </button>
@@ -174,9 +178,31 @@
         </div>
       </section>
       <!-- <section id="contact">
-        <input id="email" /><input id="subject"/><textarea id="body"></textarea><button id="send">SEND</button>
+        <h2>Contact</h2>
+        <form class="form_div">
+          <div>
+            <span class="label">Email</span>
+            <input type="text" />
+          </div>
+          <div>
+            <span class="label">Subject</span>
+            <input type="text" />
+          </div>
+          <div>
+            <span class="label">Body</span>
+            <textarea type="text" id="body"></textarea>
+          </div>
+          <button class="special-btn">Submit</button>
+        </form>
       </section> -->
+      <div style="height: 5rem"></div>
     </main>
+    <div class="settings">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
