@@ -407,33 +407,3 @@ h2 {
     max-width: 100% !important;
   }
 }
-
-/* Contact */
-
-input,
-textarea {
-  all: unset;
-  padding: 0.5rem;
-  background: var(--primary);
-  color: var(--bg);
-}
-
-#body {
-  width: 100%;
-  height: 20rem;
-}
-
-section#contact {
-  display: flex;
-  flex-wrap: wrap;
-}
-.special-btn{
-  box-shadow: none;
-  outline: 10px solid var(--bg, white);
-  border-radius: 0.75rem;
-  transform: translate(0, 50%);
-}
-
-input, textarea{
-  border-radius: 0.5rem;
-}

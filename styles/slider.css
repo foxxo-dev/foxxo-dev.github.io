@@ -1,19 +1,20 @@
 @import './variables.css';
 
-
-.switch{
+.switch {
   display: flex;
   gap: 0.5rem;
 }
 /* The switch - the box around the slider */
 .switch {
-  position: relative;
-  display: inline-block;
+  position: fixed;
+  display: block;
   width: 60px;
   height: 34px;
   position: fixed;
   right: 1rem;
   bottom: 1rem;
+  outline: 5px solid var(--primary, red);
+  border-radius: 10000000vw;
 }
 
 /* Hide default HTML checkbox */
@@ -31,13 +32,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--bg, white);
+  background-color: var(--bg, red);
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  outline: 5px solid var(--primary, red);
-  -webkit-box-shadow: 0px 0px 0px 10px var(--bg, white);
-  -moz-box-shadow: 0px 0px 0px 10px var(--bg, white);
-  box-shadow: 0px 0px 0px 10px var(--bg, white);
 }
 
 .slider:before {
@@ -53,8 +50,7 @@
 }
 
 input:checked + .slider {
-  background-color: var(--primary, red);
-  outline: 5px solid var(--bg, white);
+  background-color: var(--bg, red);
 }
 
 input:focus + .slider {
@@ -65,7 +61,6 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-  background: var(--bg, white);
 }
 
 /* Rounded sliders */
@@ -75,4 +70,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+input:checked + .slider::before {
+  background-color: var(--primary, white);
 }
