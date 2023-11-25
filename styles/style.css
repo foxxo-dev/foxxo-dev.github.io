@@ -399,6 +399,20 @@ h2 {
   a::after {
     width: 100%;
   }
+  .seperator {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+    opacity: 0.8;
+  }
+
+  #countdown {
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+    width: fit-content;
+  }
 }
 
 @media (max-width: 704px) {
