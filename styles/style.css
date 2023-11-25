@@ -401,15 +401,13 @@ h2 {
   }
   .seperator {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin-inline: auto;
     transform: none;
     opacity: 0.8;
   }
 
   #countdown {
-    margin-left: 0;
-    margin-right: 0;
+    margin-inline: auto;
     transform: none;
     width: fit-content;
   }
