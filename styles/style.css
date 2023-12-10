@@ -26,6 +26,7 @@ body {
   overflow-x: none;
   scroll-behavior: smooth;
   scroll-margin-top: 5rem;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
 }
 
 a {
@@ -405,24 +406,4 @@ h2 {
     width: 100% !important;
     max-width: 100% !important;
   }
-}
-
-/* Contact */
-
-input,
-textarea {
-  all: unset;
-  padding: 0.5rem;
-  background: var(--primary);
-  color: var(--bg);
-}
-
-#body {
-  width: 100%;
-  height: 20rem;
-}
-
-section#contact {
-  display: flex;
-  flex-wrap: wrap;
 }

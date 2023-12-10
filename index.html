@@ -22,17 +22,51 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <link type="application/json+oembed" href="./oembed.json" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/scroll.css" />
     <link rel="stylesheet" href="./styles/contact-form.css" />
-    <link rel="icon" href="./images/foxxo.png" />
+    <link rel="stylesheet" href="./styles/slider.css" />
+    <link rel="icon" href="../images/foxxo.png" />
     <script
       src="https://kit.fontawesome.com/e67c6a9ebf.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('xtm2d8zQhpmZHeerG');
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById('contact-form')
+          .addEventListener('submit', function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_oi51lib', 'template_txmv50l', this).then(
+              function () {
+                document.getElementById('contact-form').reset();
+                console.log('SUCCESS!');
+              },
+              function (error) {
+                console.log('FAILED...', error);
+              }
+            );
+          });
+      };
+    </script>
     <title>Foxxo | Portfolio</title>
   </head>
-  <body>
+  <body data-theme="normal">
     <nav>
       <div class="logo">
         <h4>FXX</h4>
@@ -178,24 +212,38 @@
         </div>
       </section>
       <section id="contact">
-        <h2>Contacties momant</h2>
-        <form class="form_div">
+        <h2>Contact</h2>
+        <form class="form_div" id="contact-form">
+          <input type="hidden" name="contact_number" />
+
           <div>
-            <span class="label">Emailos amigos</span>
-            <input type="text" />
+            <!-- <span class="label">Email</span> -->
+            <input type="email" name="user_email" placeholder="Email" />
           </div>
           <div>
-            <span class="label">Subjectos the topicos</span>
-            <input type="text" />
+            <!-- <span class="label">Subject</span> -->
+            <input type="text" name="user_name" placeholder="Subject" />
           </div>
           <div>
-            <span class="label">writos łat abałtos</span>
-            <textarea type="text" id="body"></textarea>
+            <!-- <span class="label">Body</span> -->
+            <textarea
+              type="text"
+              id="body"
+              name="message"
+              placeholder="Body"
+            ></textarea>
           </div>
-          <button>Dzamdziok</button>
+          <button type="submit" class="special-btn">Submit</button>
         </form>
       </section>
+      <div style="height: 5rem"></div>
     </main>
+    <div class="settings">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>

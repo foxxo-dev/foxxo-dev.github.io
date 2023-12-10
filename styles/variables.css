@@ -3,7 +3,39 @@
 *::after {
   box-sizing: border-box;
 }
-:root {
+
+/* Default Theme */
+
+body[data-theme='normal'] {
   --bg: #f3f3ee;
   --primary: #f74e3a;
+}
+
+/* Contrast Theme */
+body[data-theme='contrast'] {
+  --primary: #f3f3ee;
+  --bg: #f74e3a;
+}
+
+::placeholder {
+  color: #ccc;
+  margin-left: 0.5rem;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  margin-left: 0.5rem;
+  color: #ccc;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--primary, white);
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 0 100% var(--primary, red);
+  border: 5px solid var(--primary, red);
+  /* filter: brightness(0.9); */
 }
