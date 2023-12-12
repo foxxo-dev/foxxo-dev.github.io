@@ -413,3 +413,9 @@ h2 {
     max-width: 100% !important;
   }
 }
+
+@media (max-height: 708px) {
+  .seperator_landing {
+    display: none !important;
+  }
+}
