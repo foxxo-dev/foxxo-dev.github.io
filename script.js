@@ -6,8 +6,6 @@
 //   window.location.href = './pages/mobile.html';
 // }
 
-localStorage.setItem('theme', 'contrast');
-
 const mutationObserver = new MutationObserver(updateTheme);
 mutationObserver.observe(document.body, { attributes: true });
 
@@ -51,7 +49,7 @@ function updateTheme() {
 // }
 
 if (localStorage.getItem('theme') === null) {
-  localStorage.setItem('theme', 'contrast');
+  localStorage.setItem('theme', 'normal');
 }
 
 function getTimeUntilChristmas() {
