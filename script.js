@@ -87,21 +87,21 @@ function updateCountdown() {
 // Update the countdown every second
 setInterval(updateCountdown, 1000);
 
-// if (localStorage.getItem('theme') === 'contrast') {
-//   document.body.setAttribute('data-theme', 'contrast');
-//   document.getElementById('theme-toggle').checked = true;
-// } else if (localStorage.getItem('theme') === 'normal') {
-//   document.body.setAttribute('data-theme', 'normal');
-//   document.getElementById('theme-toggle').checked = false;
-// }
+if (localStorage.getItem('theme') === 'contrast') {
+  document.body.setAttribute('data-theme', 'contrast');
+  document.getElementById('theme-toggle').checked = true;
+} else if (localStorage.getItem('theme') === 'normal') {
+  document.body.setAttribute('data-theme', 'normal');
+  document.getElementById('theme-toggle').checked = false;
+}
 
-// document.getElementById('theme-toggle').addEventListener('change', (e) => {
-//   console.log(e.target.checked);
-//   if (e.target.checked) {
-//     document.body.setAttribute('data-theme', 'contrast');
-//     localStorage.setItem('theme', 'contrast');
-//   } else {
-//     document.body.setAttribute('data-theme', 'normal');
-//     localStorage.setItem('theme', 'normal');
-//   }
-// });
+document.getElementById('theme-toggle').addEventListener('change', (e) => {
+  console.log(e.target.checked);
+  if (e.target.checked) {
+    document.body.setAttribute('data-theme', 'contrast');
+    localStorage.setItem('theme', 'contrast');
+  } else {
+    document.body.setAttribute('data-theme', 'normal');
+    localStorage.setItem('theme', 'normal');
+  }
+});
