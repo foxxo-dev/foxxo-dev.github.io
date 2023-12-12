@@ -6,18 +6,49 @@
 //   window.location.href = './pages/mobile.html';
 // }
 
-function copyText(text) {
-  const storage = document.createElement('textarea');
-  storage.value = text;
-  document.body.appendChild(storage);
+localStorage.setItem('theme', 'contrast');
 
-  // Copy the text in the fake `textarea` and remove the `textarea`
-  storage.select();
-  storage.setSelectionRange(0, 99999);
-  document.execCommand('copy');
-  document.body.removeChild(storage);
-  alert('Copied to clipboard!');
+const mutationObserver = new MutationObserver(updateTheme);
+mutationObserver.observe(document.body, { attributes: true });
+
+function updateTheme() {
+  console.log('Updating Theme');
+
+  // Disconnect the observer temporarily to avoid triggering unnecessary updates
+  mutationObserver.disconnect();
+
+  if (localStorage.getItem('theme') === 'contrast') {
+    document.body.setAttribute('data-theme', 'contrast');
+    // Uncomment the line below if you have an element with id 'theme-toggle'
+    // document.getElementById('theme-toggle').checked = true;
+    const metaTag = document.querySelector('meta[name="theme-color"]');
+    if (metaTag) {
+      metaTag.setAttribute('content', '#F74E3A');
+    }
+  } else if (localStorage.getItem('theme') === 'normal') {
+    document.body.setAttribute('data-theme', 'normal');
+    // Uncomment the line below if you have an element with id 'theme-toggle'
+    // document.getElementById('theme-toggle').checked = false;
+    const metaTag = document.querySelector('meta[name="theme-color"]');
+    if (metaTag) {
+      metaTag.setAttribute('content', '#F3F3EE');
+    }
+  }
+
+  // Reconnect the observer after updating the theme
+  mutationObserver.observe(document.body, { attributes: true });
 }
+
+// Remove the unused copyText function
+// function copyText(text) {
+//   navigator.clipboard.writeText(text)
+//     .then(() => {
+//       alert('Copied to clipboard!');
+//     })
+//     .catch((error) => {
+//       console.error('Failed to copy text:', error);
+//     });
+// }
 
 if (localStorage.getItem('theme') === null) {
   localStorage.setItem('theme', 'contrast');
