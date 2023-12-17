@@ -56,18 +56,33 @@ if (localStorage.getItem('theme') === null) {
 
 // Replace your existing countdown logic with a Christmas countdown
 // Calculate the time until Christmas (assuming Christmas is on December 25)
-const christmasDate = new Date('December 25, 2023 00:00:00').getTime();
-const now = new Date().getTime();
-const timeRemaining = christmasDate - now;
+let intervalId; // Declare a variable to store the interval ID
 
-// Calculate days, hours, minutes, and seconds
-const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+function updateTime() {
+  const christmasDate = new Date('December 24, 2023 00:00:00').getTime();
+  const now = new Date().getTime();
+  const timeRemaining = christmasDate - now;
 
-document.getElementById('christmas_time').innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
+  if (timeRemaining == 0) {
+    document.getElementById('christmas_time').innerHTML = 'Merry Christmas!';
+    clearInterval(intervalId); // Clear the interval when the time is up
+    return;
+  }
 
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  document.getElementById(
+    'christmas_time'
+  ).innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
+}
+
+intervalId = setInterval(updateTime, 1000); // Store the interval ID
 
 // if (localStorage.getItem('theme') === 'contrast') {
 //   document.body.setAttribute('data-theme', 'contrast');
