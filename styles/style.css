@@ -26,7 +26,7 @@ body {
   overflow-x: none;
   scroll-behavior: smooth;
   scroll-margin-top: -5rem; /* Keep your original value */
-  scroll-margin-top: calc((5rem + 2.5rem) * -1);
+  /* scroll-margin-top: calc((5rem + 2.5rem) * -1); */
   transition: background 200ms ease-in-out, color 200ms ease-in-out;
 }
 
