@@ -29,6 +29,54 @@ body {
   transition: background 200ms ease-in-out, color 200ms ease-in-out;
 }
 
+lndgImg {
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+  z-index: 0;
+  font-size: 10px;
+}
+
+.lndg_1 {
+  width: 40em;
+  position: absolute;
+  right: 9em;
+  bottom: 5rem;
+}
+.lndg_2 {
+  width: 50em;
+  position: absolute;
+  right: 1em;
+  bottom: 15rem;
+}
+
+@media (max-width: 1650px) {
+  lndgImg {
+    display: none;
+  }
+}
+
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+}
+
+.snowflake {
+  font-size: 20px;
+  color: #fff;
+  user-select: none;
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
 a {
   color: var(--primary);
   text-decoration: none;
@@ -400,16 +448,15 @@ h2 {
     width: 100%;
   }
   .seperator {
-    width: 100%;
-    margin-inline: auto;
-    transform: none;
-    opacity: 0.8;
+    display: none;
   }
 
   #countdown {
-    margin-inline: auto;
-    transform: none;
-    width: fit-content;
+    width: 80vw !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0 !important;
   }
 }
 
@@ -432,14 +479,14 @@ h2 {
   margin-left: calc(-7.5rem + 50%);
   margin-right: auto;
   transform: translateX(-50%);
-  width: fit-content;
+  max-width: fit-content;
 }
 
 #christmas_time {
   background: var(--primary, red);
   color: var(--bg, white);
   /* background: green !important; */
-  max-width: 30pc;
+  max-width: 50pc;
   text-align: center;
   padding: 1rem;
   border-radius: 1rem;
