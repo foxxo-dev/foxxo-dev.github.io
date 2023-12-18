@@ -25,8 +25,57 @@ body {
   font-family: 'Inter', sans-serif;
   overflow-x: none;
   scroll-behavior: smooth;
-  scroll-margin-top: 5rem;
+  scroll-margin-top: -5rem; /* Keep your original value */
+  /* scroll-margin-top: calc((5rem + 2.5rem) * -1); */
   transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+lndgImg {
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+  z-index: 0;
+  font-size: 10px;
+}
+
+.lndg_1 {
+  width: 40em;
+  position: absolute;
+  right: 9em;
+  bottom: 5rem;
+}
+.lndg_2 {
+  width: 50em;
+  position: absolute;
+  right: 1em;
+  bottom: 15rem;
+}
+
+@media (max-width: 1650px) {
+  lndgImg {
+    display: none;
+  }
+}
+
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+}
+
+.snowflake {
+  font-size: 20px;
+  color: #fff;
+  user-select: none;
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
 }
 
 a {
@@ -400,10 +449,15 @@ h2 {
     width: 100%;
   }
   .seperator {
-    width: 100%;
-    margin-inline: auto;
-    transform: none;
-    opacity: 0.8;
+    display: none;
+  }
+
+  #countdown {
+    width: 80vw !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0 !important;
   }
 }
 
@@ -412,6 +466,42 @@ h2 {
     width: 100% !important;
     max-width: 100% !important;
   }
+}
+
+.seperator {
+  width: 80%;
+  margin-left: calc(-7.5rem + 50%);
+  margin-right: auto;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}
+
+#countdown {
+  margin-left: calc(-7.5rem + 50%);
+  margin-right: auto;
+  transform: translateX(-50%);
+  max-width: fit-content;
+}
+
+#christmas_time {
+  background: var(--primary, red);
+  color: var(--bg, white);
+  /* background: green !important; */
+  max-width: 50pc;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  margin-inline: auto;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 3rem);
+  pointer-events: none;
 }
 
 @media (max-height: 708px) {

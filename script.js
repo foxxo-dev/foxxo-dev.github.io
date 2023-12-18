@@ -52,40 +52,35 @@ if (localStorage.getItem('theme') === null) {
   localStorage.setItem('theme', 'normal');
 }
 
-function getTimeUntilChristmas() {
-  // Get the current date and Christmas date
-  const now = new Date();
-  const christmasDate = new Date(now.getFullYear(), 11, 25); // Christmas is on December 25th
+// Replace your existing countdown logic with a Christmas countdown
+// Calculate the time until Christmas (assuming Christmas is on December 25)
+let intervalId; // Declare a variable to store the interval ID
 
-  // If Christmas has already passed this year, set it for next year
-  if (now > christmasDate) {
-    christmasDate.setFullYear(now.getFullYear() + 1);
+function updateTime() {
+  const christmasDate = new Date('December 24, 2023 00:00:00').getTime();
+  const now = new Date().getTime();
+  const timeRemaining = christmasDate - now;
+
+  if (timeRemaining == 0) {
+    document.getElementById('christmas_time').innerHTML = 'Merry Christmas!';
+    clearInterval(intervalId); // Clear the interval when the time is up
+    return;
   }
 
-  // Calculate the time difference in milliseconds
-  const timeDiff = christmasDate - now;
-
-  // Calculate days and hours
-  const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
-    (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
   );
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-  return { days, hours };
+  document.getElementById(
+    'christmas_time'
+  ).innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
 }
 
-const countdownElement = document.getElementById('christmas_time');
-
-// Function to update the countdown display
-function updateCountdown() {
-  const { days, hours } = getTimeUntilChristmas();
-
-  // Display the time remaining
-  countdownElement.innerHTML = `${days} days and ${hours} hours`;
-}
-
-// Update the countdown every second
-setInterval(updateCountdown, 1000);
+intervalId = setInterval(updateTime, 1000); // Store the interval ID
 
 if (localStorage.getItem('theme') === 'contrast') {
   document.body.setAttribute('data-theme', 'contrast');

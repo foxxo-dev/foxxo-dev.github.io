@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="./styles/scroll.css" />
     <link rel="stylesheet" href="./styles/contact-form.css" />
     <link rel="stylesheet" href="./styles/slider.css" />
+    <link rel="stylesheet" href="./styles/cursor.css" />
     <link rel="icon" href="../images/foxxo.png" />
     <script
       src="https://kit.fontawesome.com/e67c6a9ebf.js"
@@ -103,6 +104,10 @@
     </nav>
     <main>
       <section id="landing">
+        <lndgImg
+          ><img src="./images/tree.svg" class="lndg_2" />
+          <img src="./images/presents.svg" class="lndg_1"
+        /></lndgImg>
         <h1>
           YOUR <span class="bullet_point"></span> PERSONAL <br />DESIGNER
           <span class="bullet_point"></span> DREAM
@@ -159,6 +164,17 @@
           <img src="../images/foxxo.png" alt="Profile Picture" />
         </div>
       </section>
+      <hr class="seperator" />
+      <section id="countdown">
+        <div>
+          <h2>Merry Christmas Countdown!</h2>
+        </div>
+        <h3 id="christmas_time">
+          -- days, -- hours, -- minutes, and -- seconds
+        </h3>
+      </section>
+
+      <hr class="seperator" />
       <section id="projects">
         <h2>Projects</h2>
         <div class="projects_container">
@@ -250,7 +266,12 @@
         <input type="checkbox" id="theme-toggle" />
         <span class="slider round"></span>
       </label>
-    </div>
+    </div> -->
+    <div id="particles-js"></div>
+    <div class="cursor-trail"></div>
   </body>
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
+  <script src="./particle_orig.min.js"></script>
+  <script src="./particles.js"></script>
+  <script src="./cursor.js"></script>
 </html>
