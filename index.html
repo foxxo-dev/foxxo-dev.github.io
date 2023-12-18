@@ -8,20 +8,14 @@
       name="description"
       content="My portfolio. A place where you can find all of my projects, or contact me for some work!"
     />
-    <meta
-      content="Foxxo | My Portfolio"
-      property="og:title"
-    />
+    <meta content="Foxxo | My Portfolio" property="og:title" />
 
     <meta
       content="My portfolio. A place where you can find all of my projects, or contact me for some work!"
       property="og:description"
     />
 
-    <meta
-      content="https://foxxo.studio/images/foxxo.png"
-      property="og:image"
-    />
+    <meta content="https://foxxo.studio/images/foxxo.png" property="og:image" />
 
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -79,6 +73,7 @@
       <ul class="nav-links" id="nav-link">
         <li><a href="#landing">HOME</a></li>
         <li><a href="#about-me">ABOUT ME</a></li>
+        <li><a href="#countdown">NEW YEAR</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
@@ -104,10 +99,7 @@
     </nav>
     <main>
       <section id="landing">
-        <lndgImg
-          ><img src="./images/tree.svg" class="lndg_2" />
-          <img src="./images/presents.svg" class="lndg_1"
-        /></lndgImg>
+        <canvas id="canvas" class="fireworks"></canvas>
         <h1>
           YOUR <span class="bullet_point"></span> PERSONAL <br />DESIGNER
           <span class="bullet_point"></span> DREAM
@@ -167,7 +159,7 @@
       <hr class="seperator" />
       <section id="countdown">
         <div>
-          <h2>Merry Christmas Countdown!</h2>
+          <h2>New Year Countdown!</h2>
         </div>
         <h3 id="christmas_time">
           -- days, -- hours, -- minutes, and -- seconds
@@ -261,17 +253,16 @@
       </section>
       <div style="height: 5rem"></div>
     </main>
-    <div class="settings">
+    <!-- <div class="settings">
       <label class="switch">
         <input type="checkbox" id="theme-toggle" />
         <span class="slider round"></span>
       </label>
     </div> -->
     <div id="particles-js"></div>
-    <div class="cursor-trail"></div>
   </body>
+  <script src="./fireworks.js"></script>
   <script src="./script.js"></script>
   <script src="./particle_orig.min.js"></script>
   <script src="./particles.js"></script>
-  <script src="./cursor.js"></script>
 </html>

@@ -17,6 +17,23 @@
   border-radius: 10000000vw;
 }
 
+.fireworks {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg, white) !important;
+}
+
+#landing {
+  background: transparent !important;
+}
+
+#landing > * {
+  z-index: 5 !important;
+}
+
 /* Hide default HTML checkbox */
 .switch input {
   opacity: 0;

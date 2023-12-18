@@ -57,7 +57,7 @@ if (localStorage.getItem('theme') === null) {
 let intervalId; // Declare a variable to store the interval ID
 
 function updateTime() {
-  const christmasDate = new Date('December 24, 2023 00:00:00').getTime();
+  const christmasDate = new Date('December 30, 2023 23:59:59').getTime();
   const now = new Date().getTime();
   const timeRemaining = christmasDate - now;
 
