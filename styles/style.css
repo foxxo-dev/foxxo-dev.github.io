@@ -504,8 +504,11 @@ h2 {
   pointer-events: none;
 }
 
-@media (max-height: 708px) {
-  .seperator_landing {
+@media (max-width: 708px) {
+  #contact {
     display: none !important;
+  }
+  .contact-rel {
+    display: none;
   }
 }
