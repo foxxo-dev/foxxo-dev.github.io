@@ -56,31 +56,7 @@ if (localStorage.getItem('theme') === null) {
 // Calculate the time until Christmas (assuming Christmas is on December 25)
 let intervalId; // Declare a variable to store the interval ID
 
-function updateTime() {
-  const christmasDate = new Date('December 30, 2023 23:59:59').getTime();
-  const now = new Date().getTime();
-  const timeRemaining = christmasDate - now;
-
-  if (timeRemaining == 0) {
-    document.getElementById('christmas_time').innerHTML = 'Merry Christmas!';
-    clearInterval(intervalId); // Clear the interval when the time is up
-    return;
-  }
-
-  // Calculate days, hours, minutes, and seconds
-  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-  document.getElementById(
-    'christmas_time'
-  ).innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
-}
-
-intervalId = setInterval(updateTime, 1000); // Store the interval ID
+// intervalId = setInterval(updateTime, 1000); // Store the interval ID
 
 if (localStorage.getItem('theme') === 'contrast') {
   document.body.setAttribute('data-theme', 'contrast');
@@ -100,3 +76,44 @@ document.getElementById('theme-toggle').addEventListener('change', (e) => {
     localStorage.setItem('theme', 'normal');
   }
 });
+
+const overlay = document.getElementById('overlay-container');
+const password = document.getElementById('password-num');
+const passwordBtn = document.getElementById('password-btn');
+const main = document.querySelector('main');
+
+window.addEventListener('load', () => {
+  main.style.display = 'none !important';
+});
+
+passwordBtn.addEventListener('click', () => {
+  console.log('Click!');
+  console.log(convert(btoa(password.value)));
+  console.log(
+    convert(btoa(password.value)).replace(/^\s+|\s+$/gm, '') ==
+      '1001101 1101010 1101011 1110111 1001101 1000001 111101 111101 '.replace(
+        /^\s+|\s+$/gm,
+        ''
+      )
+  );
+  if (
+    convert(btoa(password.value)).replace(/^\s+|\s+$/gm, '') ==
+    '1001101 1101010 1101011 1110111 1001101 1000001 111101 111101 '.replace(
+      /^\s+|\s+$/gm,
+      ''
+    )
+  ) {
+    overlay.style.display = 'none';
+    main.style.display = 'block';
+  } else {
+    alert('Wrong Password!');
+  }
+});
+function convert(input) {
+  var output;
+  output = '';
+  for (var i = 0; i < input.length; i++) {
+    output += input[i].charCodeAt(0).toString(2) + ' ';
+  }
+  return output;
+}
