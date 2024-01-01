@@ -468,47 +468,11 @@ h2 {
   }
 }
 
-.seperator {
-  width: 80%;
-  margin-left: calc(-7.5rem + 50%);
-  margin-right: auto;
-  transform: translateX(-50%);
-  opacity: 0.8;
-}
-
-#countdown {
-  margin-left: calc(-7.5rem + 50%);
-  margin-right: auto;
-  transform: translateX(-50%);
-  max-width: fit-content;
-}
-
-#christmas_time {
-  background: var(--primary, red);
-  color: var(--bg, white);
-  /* background: green !important; */
-  max-width: 50pc;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-size: 2rem;
-  margin-inline: auto;
-}
-
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
+.sub {
   width: 100%;
-  height: calc(100% - 3rem);
-  pointer-events: none;
-}
-
-@media (max-width: 708px) {
-  #contact {
-    display: none !important;
-  }
-  .contact-rel {
-    display: none;
-  }
+  text-align: center;
+  opacity: 0.8;
+  font-size: 0.8rem;
+  line-height: 1;
+  margin-top: 0.5rem;
 }
