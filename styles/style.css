@@ -505,17 +505,8 @@ h2 {
 .sub {
   width: 100%;
   text-align: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-size: 2rem;
-  margin-inline: auto;
-}
-
-@media (max-width: 708px) {
-  #contact {
-    display: none !important;
-  }
-  .contact-rel {
-    display: none;
-  }
+  opacity: 0.8;
+  font-size: 0.8rem;
+  line-height: 1;
+  margin-top: 0.5rem;
 }
