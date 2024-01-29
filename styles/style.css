@@ -511,15 +511,6 @@ h2 {
   margin-inline: auto;
 }
 
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 3rem);
-  pointer-events: none;
-}
-
 @media (max-width: 708px) {
   #contact {
     display: none !important;
