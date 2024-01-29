@@ -13,6 +13,40 @@
 
 /* Basic Styling */
 
+#overlay-container {
+  position: fixed;
+  z-index: 3938459083490584390;
+  background: var(--bg);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#overlay-container input {
+  all: unset;
+  border: 3px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 20rem;
+  text-align: center;
+}
+
+#overlay-container button {
+  border-radius: 5px;
+  box-shadow: none;
+  transform: none !important;
+  outline: 5px solid var(--bg);
+  outline-offset: -7px;
+}
+
 html,
 body {
   width: 100%;
@@ -468,26 +502,8 @@ h2 {
   }
 }
 
-.seperator {
-  width: 80%;
-  margin-left: calc(-7.5rem + 50%);
-  margin-right: auto;
-  transform: translateX(-50%);
-  opacity: 0.8;
-}
-
-#countdown {
-  margin-left: calc(-7.5rem + 50%);
-  margin-right: auto;
-  transform: translateX(-50%);
-  max-width: fit-content;
-}
-
-#christmas_time {
-  background: var(--primary, red);
-  color: var(--bg, white);
-  /* background: green !important; */
-  max-width: 50pc;
+.sub {
+  width: 100%;
   text-align: center;
   padding: 1rem;
   border-radius: 1rem;

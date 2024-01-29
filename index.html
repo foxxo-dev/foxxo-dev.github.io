@@ -36,13 +36,13 @@
       src="https://kit.fontawesome.com/e67c6a9ebf.js"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       (function () {
         // https://dashboard.emailjs.com/admin/account
         emailjs.init('xtm2d8zQhpmZHeerG');
       })();
-    </script>
-    <script type="text/javascript">
+    </script> -->
+    <!-- <script type="text/javascript">
       window.onload = function () {
         document
           .getElementById('contact-form')
@@ -62,7 +62,7 @@
             );
           });
       };
-    </script>
+    </script> -->
     <title>Foxxo | Portfolio</title>
   </head>
   <body data-theme="normal">
@@ -73,7 +73,6 @@
       <ul class="nav-links" id="nav-link">
         <li><a href="#landing">HOME</a></li>
         <li><a href="#about-me">ABOUT ME</a></li>
-        <li><a href="#countdown">NEW YEAR</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#contact" class="contact-rel">CONTACT</a></li>
       </ul>
@@ -156,20 +155,19 @@
           <img src="../images/foxxo.png" alt="Profile Picture" />
         </div>
       </section>
-      <hr class="seperator" />
-      <section id="countdown">
-        <div>
-          <h2>New Year Countdown!</h2>
-        </div>
-        <h3 id="christmas_time">
-          -- days, -- hours, -- minutes, and -- seconds
-        </h3>
-      </section>
-
-      <hr class="seperator" />
       <section id="projects">
         <h2>Projects</h2>
         <div class="projects_container">
+          <div class="project">
+            <img src="./images/projects/partyplay.svg" alt="" />
+            <h3>Party Play</h3>
+            <button
+              onclick="window.open('https://party-play.foxxo.studio', '_blank')"
+            >
+              OPEN PROJECT
+            </button>
+            <span class="sub">Spotify API</span>
+          </div>
           <div class="project">
             <img src="../images/projects/thisispoland.png" alt="" />
             <h3>This is Poland</h3>
@@ -178,6 +176,7 @@
             >
               OPEN PROJECT
             </button>
+            <span class="sub">Mobile-Only</span>
           </div>
           <div class="project">
             <img src="../images/projects/aitalk.png" alt="" />
@@ -187,6 +186,7 @@
             >
               OPEN PROJECT
             </button>
+            <span class="sub">ChatGPT - Not Paid</span>
           </div>
           <div class="project">
             <img src="../images/projects/playsavvy.png" alt="" />
@@ -196,6 +196,7 @@
             >
               OPEN PROJECT
             </button>
+            <span class="sub">React - First Custom Backend</span>
           </div>
           <div class="project">
             <img src="../images/projects/foxtube.png" alt="" />
@@ -205,6 +206,7 @@
             >
               OPEN PROJECT
             </button>
+            <span class="sub">React</span>
           </div>
           <div class="project">
             <img src="../images/projects/FlappyPotato.png" alt="" />
@@ -214,6 +216,7 @@
             >
               OPEN PROJECT
             </button>
+            <span class="sub">PHP Database</span>
           </div>
           <div class="project">
             <img src="../images/projects/Transportation4U.png" alt="" />
@@ -223,6 +226,17 @@
             >
               OPEN PROJECT
             </button>
+            <span class="sub">Early Science Project</span>
+          </div>
+          <div class="project">
+            <img src="../images/foxxo.png" alt="" />
+            <h3>Fex Code</h3>
+            <button
+              onclick="window.open('https://github.com/foxxo-dev/fexcode',  '_blank')"
+            >
+              OPEN PROJECT
+            </button>
+            <span class="sub">Typescript</span>
           </div>
         </div>
       </section>
@@ -248,21 +262,28 @@
               placeholder="Body"
             ></textarea>
           </div>
-          <button type="submit" class="special-btn">Submit</button>
+          <!-- <button type="submit" class="special-btn">Submit</button> -->
         </form>
       </section>
       <div style="height: 5rem"></div>
     </main>
-    <!-- <div class="settings">
+    <div class="settings">
       <label class="switch">
         <input type="checkbox" id="theme-toggle" />
         <span class="slider round"></span>
       </label>
-    </div> -->
-    <div id="particles-js"></div>
+    </div>
+    <div id="overlay-container">
+      <input
+        type="text"
+        id="password-num"
+        placeholder="Password"
+        maxlength="4"
+        pattern="[0-9]{4}"
+      />
+      <button id="password-btn">Submit</button>
+    </div>
   </body>
-  <script src="./fireworks.js"></script>
+  <script></script>
   <script src="./script.js"></script>
-  <script src="./particle_orig.min.js"></script>
-  <script src="./particles.js"></script>
 </html>
